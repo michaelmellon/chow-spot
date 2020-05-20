@@ -32,22 +32,20 @@ class App extends React.Component {
         const data = await api_call.json();
         
         if (city && fare) {
-            console.log(data)
-
             this.setState({
                 restaurants: data.response.venues,
                 //venues: data.response.venues[0],
-                name: data.response.venues.name,
-                location: data.response.venues[0].location.address,
+                //name: data.response.venues.name,
+                //location: data.response.venues.location.address,
                 error: ""
             });
         } else {
             this.setState({
                 restaurants: null,
-                venues: null,
-                name: null,
-                location: null,
-                delivery: null,
+                //venues: null,
+                //name: null,
+                //location: null,
+                //delivery: null,
                 error: "Do not leave field blank."
             });
         } 
@@ -58,14 +56,13 @@ class App extends React.Component {
         return (
             <div>
                 <Title />
-                <h1>{process.env.CLIENT_ID}hello</h1>
                 <Form getRestaurants={this.getRestaurants}/>
                 <Restaurant
                     restaurants = {this.state.restaurants}
                     //venues={this.state.venues}
-                    name={this.state.name}
-                    location={this.state.location}
-                    delivery={this.state.delivery}
+                    //name={this.state.name}
+                    //location={this.state.location}
+                    //delivery={this.state.delivery}
                     error={this.state.error}
                     />
                 <Footer />
