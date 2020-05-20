@@ -3,8 +3,9 @@ import React from 'react';
 const Title = props => {
     return (
         <div>
-            <h1>Chow Spot</h1>
-            <p>Discover new and exciting restarants right outside your front door.</p>
+        <div className="square"> </div>
+            <h1 className="title-container__title">Chow Spot</h1>
+            <h3 className="title-container__subtitle">Discover new and exciting restarants right outside your front door.</h3>
         </div>
     )
 }

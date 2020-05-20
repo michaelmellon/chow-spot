@@ -28,7 +28,7 @@ class App extends React.Component {
             method: 'GET',
             redirect: 'follow'
         }
-        const api_call = await fetch(`https://api.foursquare.com/v2/venues/search?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}&v=20180323&near=${city}&intent=browse&query=${fare}&categoryId=4d4b7105d754a06374d81259&limit=10`, requestOptions)
+        const api_call = await fetch(`https://api.foursquare.com/v2/venues/search?client_id=${process.env.REACT_APP_CLIENT_ID}&client_secret=${process.env.REACT_APP_CLIENT_SECRET}&v=20180323&near=${city}&intent=browse&query=${fare}&categoryId=4d4b7105d754a06374d81259&limit=20&radius=25000`, requestOptions)
         const data = await api_call.json();
         
         if (city && fare) {
@@ -46,7 +46,7 @@ class App extends React.Component {
                 //name: null,
                 //location: null,
                 //delivery: null,
-                error: "Do not leave field blank."
+                error: "If you leave the fields blank you won't get any chow!"
             });
         } 
     }
@@ -55,17 +55,35 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Title />
-                <Form getRestaurants={this.getRestaurants}/>
-                <Restaurant
-                    restaurants = {this.state.restaurants}
-                    //venues={this.state.venues}
-                    //name={this.state.name}
-                    //location={this.state.location}
-                    //delivery={this.state.delivery}
-                    error={this.state.error}
-                    />
-                <Footer />
+                <div className="wrapper">
+                    <div className="main">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col title-container">
+                                    <Title />
+                                    
+                                </div>
+                                    <div className="col form-container">
+                                        <Form getRestaurants={this.getRestaurants}/>
+                                        <Restaurant
+                                            restaurants = {this.state.restaurants}
+                                            //venues={this.state.venues}
+                                            //name={this.state.name}
+                                            //location={this.state.location}
+                                            //delivery={this.state.delivery}
+                                            error={this.state.error}
+                                            />  
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+                        <Footer />
+                    </div>
+                    
+                </div>
+
             </div>
         );
     }
@@ -75,5 +93,7 @@ export default App;
 
 
 /*
-                    
+          
+                
+
 */
