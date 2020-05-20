@@ -2,7 +2,8 @@ import React from 'react';
 import Title from './components/Title'
 import Form from './components/Form'
 import Restaurant from './components/Restaurants';
-
+import Footer from './components/Footer'
+import './App.css'
 require('dotenv').config();
 
 class App extends React.Component {
@@ -67,6 +68,7 @@ class App extends React.Component {
                     delivery={this.state.delivery}
                     error={this.state.error}
                     />
+                <Footer />
             </div>
         );
     }
