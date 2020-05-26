@@ -146,6 +146,10 @@ button:active {
   font-weight: 200;
 }
 
+ul li{
+  list-style: none;
+}
+
 .footer {
   flex-shrink: 0;
   width: 100%;
