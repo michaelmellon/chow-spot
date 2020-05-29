@@ -1,6 +1,7 @@
 {
   "name": "chow-spot",
   "version": "0.1.0",
+  "homepage": "https://www.michaelmellon.dev/chow-spot",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
