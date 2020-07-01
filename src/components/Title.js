@@ -5,7 +5,7 @@ const Title = props => {
         <div>
         <div className="square"> </div>
             <h1 className="title-container__title">Chow Spot</h1>
-            <h3 className="title-container__subtitle">Discover new and exciting restarants right outside your front door.</h3>
+            <h3 className="title-container__subtitle">Discover new and exciting restaurants right outside your door.</h3>
         </div>
     )
 }

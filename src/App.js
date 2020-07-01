@@ -23,7 +23,6 @@ class App extends React.Component {
         const city = e.target.elements.city.value;
         const fare = e.target.elements.fare.value;
 
-
         var requestOptions = {
             method: 'GET',
             redirect: 'follow'
